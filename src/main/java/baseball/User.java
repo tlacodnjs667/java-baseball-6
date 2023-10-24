@@ -13,26 +13,25 @@ public class User {
 
     String userNumber = Console.readLine();
 
-    if (!userNumber.matches("[0-9]+")) {
+
+    if (!userNumber.matches("[0-9]{3,3}")) {
       throw new IllegalArgumentException("게임 종료");
     } ;
-
-    if (userNumber.length() != 3) {
-      throw new IllegalArgumentException("게임 종료");
-    }
 
     numsToCompare = Arrays.stream(userNumber.split("")).map(Integer::parseInt).toList();
   }
 
   public boolean getUserContinue() {
     System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
-    int input = Integer.parseInt(Console.readLine());
+    String input = Console.readLine();
 
-    if (input != 1 && input != 2) {
+    if (input.matches("[1-2]")) {
       throw new IllegalArgumentException("게임 종료");
     }
 
-    return input == 1;
+    int progressMenu = Integer.parseInt(input);
+
+    return progressMenu == 1;
   }
 
   public List<Integer> getNumsToCompare() {

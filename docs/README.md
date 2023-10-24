@@ -32,7 +32,6 @@
 		<li>유저의 리스트 아규먼트를 넘겨받아 해당 컴퓨터가 가지고 있는 3자리 난수와 비교하는 메서드
 		<li>비교한 결과값을 가지로 해당 입력에 대한 상태 출력하는 메서드
 	</ol>
-	<br>
 	<li style="text-decoration:underline dotted"> User class
 	: User의 입력을 관장하고, 입력 받은 수를 저장하는 클래스
 	<ol>
